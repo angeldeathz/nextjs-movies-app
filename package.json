@@ -1,6 +1,6 @@
 {
   "name": "nextjs-movies-app",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,7 +12,9 @@
     "cspell": "cspell \"{app,src,components,lib}/**/*.{ts,tsx,js,jsx,md}\"",
     "audit": "better-npm-audit audit",
     "deps:check": "npx depcheck",
-    "deps:update": "npx npm-check-updates -i"
+    "deps:update": "npx npm-check-updates -i",
+    "release": "standard-version",
+    "release:dry": "standard-version --dry-run"
   },
   "dependencies": {
     "next": "16.1.4",
@@ -37,6 +39,7 @@
     "lint-staged": "^16.2.7",
     "prettier": "^3.8.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
+    "standard-version": "^9.5.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
