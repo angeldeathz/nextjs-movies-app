@@ -1,6 +1,6 @@
 {
   "1097678": {
-    "notes": "Vulnerabilidad en Next.js que no afecta a producción",
+    "notes": "Vulnerabilidad minimist 1.2.5 critica, pero no afecta a producción",
     "expiry": "2026-03-01"
   }
 }
