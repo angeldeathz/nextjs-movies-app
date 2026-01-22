@@ -1,25 +1,28 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-// Componente Header/Navbar
 export default function Header() {
   return (
     <header className="bg-[#032541] text-white">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex h-16 items-center justify-between">
           {/* Logo y navegación izquierda */}
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">
               <span className="text-xl font-bold">TMDB</span>
-              <div className="w-3 h-3 rounded-full bg-[#01b4e4]"></div>
+              <div className="h-3 w-3 rounded-full bg-[#01b4e4]"></div>
             </div>
-            <nav className="hidden md:flex items-center gap-6">
-              <Link href="/" className="hover:text-[#01b4e4] transition-colors">Peliculas</Link>
-              <Link href="/series" className="hover:text-[#01b4e4] transition-colors">Series</Link>
+            <nav className="hidden items-center gap-6 md:flex">
+              <Link href="/" className="transition-colors hover:text-[#01b4e4]">
+                Peliculas
+              </Link>
+              <Link href="/series" className="transition-colors hover:text-[#01b4e4]">
+                Series
+              </Link>
 
-              <a href="#" className="hover:text-[#01b4e4] transition-colors">
+              <a href="#" className="transition-colors hover:text-[#01b4e4]">
                 Gente
               </a>
-              <a href="#" className="hover:text-[#01b4e4] transition-colors">
+              <a href="#" className="transition-colors hover:text-[#01b4e4]">
                 Más
               </a>
             </nav>
@@ -27,15 +30,15 @@ export default function Header() {
 
           {/* Iconos derecha */}
           <div className="flex items-center gap-4">
-            <button className="w-8 h-8 flex items-center justify-center hover:bg-white/10 rounded-full transition-colors">
+            <button className="flex h-8 w-8 items-center justify-center rounded-full transition-colors hover:bg-white/10">
               <span className="text-xl">+</span>
             </button>
-            <button className="px-3 py-1 rounded hover:bg-white/10 transition-colors">
+            <button className="rounded px-3 py-1 transition-colors hover:bg-white/10">
               ES
             </button>
-            <button className="w-8 h-8 flex items-center justify-center hover:bg-white/10 rounded-full transition-colors">
+            <button className="flex h-8 w-8 items-center justify-center rounded-full transition-colors hover:bg-white/10">
               <svg
-                className="w-5 h-5"
+                className="h-5 w-5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -48,12 +51,12 @@ export default function Header() {
                 />
               </svg>
             </button>
-            <button className="w-8 h-8 flex items-center justify-center bg-white/20 rounded-full hover:bg-white/30 transition-colors">
+            <button className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition-colors hover:bg-white/30">
               <span className="text-sm font-semibold">A</span>
             </button>
-            <button className="w-8 h-8 flex items-center justify-center hover:bg-white/10 rounded-full transition-colors">
+            <button className="flex h-8 w-8 items-center justify-center rounded-full transition-colors hover:bg-white/10">
               <svg
-                className="w-5 h-5"
+                className="h-5 w-5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

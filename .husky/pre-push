@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🚀 Verificando tipos y build antes de pushear..."
+
+# Ejecutar el check de TypeScript
+npm run type-check && npm run build
