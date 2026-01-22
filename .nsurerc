@@ -1,0 +1,10 @@
+{
+  "minSeverity": "moderate",
+  "ignore": [
+    {
+      "id": 1234567,
+      "reason": "Vulnerabilidad en linter que no afecta a producción",
+      "expiry": "2026-03-01"
+    }
+  ]
+}

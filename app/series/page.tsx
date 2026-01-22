@@ -1,4 +1,5 @@
 import Header from '../../components/Header';
+import Paginator from '../../components/Paginator';
 import Sidebar from '../../components/Sidebar';
 import TvCard from '../../components/TvCard';
 import { tvService } from '../../services/tvService';
@@ -31,6 +32,11 @@ export default async function SeriesPage() {
                 <TvCard key={tv.id} tv={tv} />
               ))}
             </div>
+            <Paginator
+              currentPage={series.page}
+              totalPages={Math.min(series.total_pages, 500)}
+              basePath="/"
+            />
           </div>
         </div>
       </main>

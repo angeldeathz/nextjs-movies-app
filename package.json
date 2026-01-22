@@ -9,7 +9,8 @@
     "lint": "eslint --fix",
     "prepare": "husky",
     "type-check": "tsc --noEmit",
-    "spell-check": "cspell \"{app,src,components,lib}/**/*.{ts,tsx,js,jsx,md}\""
+    "spell-check": "cspell \"{app,src,components,lib}/**/*.{ts,tsx,js,jsx,md}\"",
+    "audit": "better-npm-audit audit"
   },
   "dependencies": {
     "next": "16.1.4",
@@ -22,6 +23,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "better-npm-audit": "^3.11.0",
     "cspell": "^9.6.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.4",
