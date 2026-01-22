@@ -90,6 +90,8 @@ Includes `prettier-plugin-tailwindcss` for Tailwind CSS class sorting.
 - `npm run type-check` - Run TypeScript type checking
 - `npm run cspell` - Run cspell on project files
 - `npm run audit` - Run better-npm-audit security audit
+- `npm run deps:check` - Check for unused dependencies using depcheck
+- `npm run deps:update` - Update dependencies to their latest versions using npm-check-updates
 
 ## Learn More
 

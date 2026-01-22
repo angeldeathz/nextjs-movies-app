@@ -10,7 +10,9 @@
     "prepare": "husky",
     "type-check": "tsc --noEmit",
     "cspell": "cspell \"{app,src,components,lib}/**/*.{ts,tsx,js,jsx,md}\"",
-    "audit": "better-npm-audit audit"
+    "audit": "better-npm-audit audit",
+    "deps:check": "npx depcheck",
+    "deps:update": "npx npm-check-updates -i"
   },
   "dependencies": {
     "next": "16.1.4",
@@ -22,7 +24,7 @@
     "@commitlint/config-conventional": "^20.3.1",
     "@cspell/dict-es-es": "^3.0.8",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "better-npm-audit": "^3.11.0",
