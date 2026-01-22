@@ -1,0 +1,8 @@
+{
+  "version": "0.2",
+  "language": "en,es",
+  "import": ["@cspell/dict-es-es/cspell-ext.json"],
+  "dictionaries": ["es-es", "typescript", "node", "npm"],
+  "words": ["shadcn", "nextjs", "tailwindcss", "tmdb", "sonner", "lucide", "auth"],
+  "ignorePaths": ["node_modules", ".next", "public", "package-lock.json", ".vscode"]
+}
