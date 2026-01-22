@@ -1,5 +1,11 @@
 # NextJS Movies App Changelog
 
+### [0.1.5](https://github.com/angeldeathz/nextjs-movies-app/compare/v0.1.4...v0.1.5) (2026-01-22)
+
+### 📝 Documentation
+
+- **PEMS-10:** updated readme.md ([d00a3a2](https://github.com/angeldeathz/nextjs-movies-app/commit/d00a3a2e0beb9f8d7db3e8635574a36b15e864db))
+
 ### [0.1.4](https://github.com/angeldeathz/nextjs-movies-app/compare/v0.1.2...v0.1.4) (2026-01-22)
 
 ### 🚀 Features
