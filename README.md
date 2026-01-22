@@ -81,6 +81,16 @@ Includes `prettier-plugin-tailwindcss` for Tailwind CSS class sorting.
 - Allows ignoring specific vulnerabilities with expiration dates
 - More flexible than standard `npm audit` command
 
+### standard-version
+
+[standard-version](https://github.com/conventional-changelog/standard-version) is used for automated versioning and changelog generation. Configuration file: `.versionrc`
+
+- Automatically bumps version based on conventional commits
+- Generates `CHANGELOG.md` from commit history
+- Creates git tags for releases
+- Custom configuration for changelog sections (Features, Bug Fixes, Documentation, Performance Updates)
+- Hides certain commit types (chore, style, refactor, test) from changelog
+
 ### Available Scripts
 
 - `npm run dev` - Start development server
@@ -92,6 +102,8 @@ Includes `prettier-plugin-tailwindcss` for Tailwind CSS class sorting.
 - `npm run audit` - Run better-npm-audit security audit
 - `npm run deps:check` - Check for unused dependencies using depcheck
 - `npm run deps:update` - Update dependencies to their latest versions using npm-check-updates
+- `npm run release` - Create a new release (bump version, update CHANGELOG, create git tag, and push to origin)
+- `npm run release:dry` - Dry run of release process to preview changes without applying them
 
 ## Learn More
 
