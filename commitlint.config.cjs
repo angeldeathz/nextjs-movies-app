@@ -1,19 +1,10 @@
 module.exports = {
   extends: ['@commitlint/config-conventional'],
-  parserPreset: {
-    parserOpts: {
-      // Esta regex es la clave:
-      // 1. Obliga a que empiece con [PROYECTO-NUMERO]
-      // 2. Siga con un espacio
-      // 3. Siga con el tipo (feat, fix, etc) y el mensaje
-      headerPattern: /^\[([A-Z]+-\d+)\]\s(\w+)(?:\(([\w\.-]+)\))?:\s(.+)$/,
-      headerCorrespondence: ['references', 'type', 'scope', 'subject'],
-    },
-  },
   rules: {
-    // Desactivamos la validación de referencias interna de commitlint
-    // porque nuestra regex ya hace el trabajo duro.
-    'references-empty': [0],
+    // 1. El ID de Jira es OBLIGATORIO (dentro del paréntesis)
+    'scope-empty': [2, 'never'],
+
+    // 2. El tipo debe ser válido (feat, fix, etc.)
     'type-enum': [
       2,
       'always',
@@ -31,8 +22,11 @@ module.exports = {
         'revert',
       ],
     ],
-    // Mantenemos las reglas estándar para el resto del mensaje
-    'subject-empty': [2, 'never'],
+
+    // 3. Reglas de estructura (vienen por defecto, pero las dejamos explícitas)
     'type-empty': [2, 'never'],
+    'subject-empty': [2, 'never'],
+    'subject-full-stop': [2, 'never', '.'], // No terminar el mensaje con punto
+    'header-max-length': [2, 'always', 72], // El estándar de oro para Git
   },
 };
