@@ -1,28 +1,28 @@
 import Image from "next/image";
-import { Movie } from "../interfaces/movie";
+import { Tv } from "../interfaces/tv";
 
-interface MovieCardProps {
-  movie: Movie;
+interface TvCardProps {
+  tv: Tv;
 }
 
-export default function MovieCard({ movie }: MovieCardProps) {
+export default function TvCard({ tv }: TvCardProps) {
   const getRatingColor = (rating: number) => {
     if (rating >= 70) return "bg-green-500";
     if (rating >= 50) return "bg-yellow-500";
     return "bg-red-500";
   };
 
-  const imageUrl = `${process.env.IMG_BASE_URL}${movie.poster_path}`;
+  const imageUrl = `${process.env.IMG_BASE_URL}${tv.poster_path}`;
 
   return (
     <div className="group cursor-pointer">
       {/* Contenedor del poster */}
       <div className="relative mb-2 overflow-hidden rounded-lg">
-        {/* Poster de la película */}
+        {/* Poster de la serie */}
         <div className="relative aspect-[2/3] bg-gray-200">
           <Image
             src={imageUrl}
-            alt={movie.title}
+            alt={tv.name}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
@@ -33,10 +33,10 @@ export default function MovieCard({ movie }: MovieCardProps) {
         <div className="absolute bottom-0 left-0 m-2">
           <div
             className={`${getRatingColor(
-              movie.vote_average
+              tv.vote_average
             )} rounded-full w-10 h-10 flex items-center justify-center text-white font-bold text-sm shadow-lg`}
           >
-            {movie.vote_average}%
+            {tv.vote_average}%
           </div>
         </div>
 
@@ -55,9 +55,9 @@ export default function MovieCard({ movie }: MovieCardProps) {
       {/* Título y fecha */}
       <div>
         <h3 className="font-bold text-gray-900 mb-1 line-clamp-1 group-hover:text-[#01b4e4] transition-colors">
-          {movie.title}
+          {tv.name}
         </h3>
-        <p className="text-sm text-gray-600">{movie.release_date}</p>
+        <p className="text-sm text-gray-600">{tv.first_air_date}</p>
       </div>
     </div>
   );

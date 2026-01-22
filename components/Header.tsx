@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 // Componente Header/Navbar
 export default function Header() {
   return (
@@ -11,12 +13,9 @@ export default function Header() {
               <div className="w-3 h-3 rounded-full bg-[#01b4e4]"></div>
             </div>
             <nav className="hidden md:flex items-center gap-6">
-              <a href="#" className="hover:text-[#01b4e4] transition-colors">
-                Películas
-              </a>
-              <a href="#" className="hover:text-[#01b4e4] transition-colors">
-                Series
-              </a>
+              <Link href="/" className="hover:text-[#01b4e4] transition-colors">Peliculas</Link>
+              <Link href="/series" className="hover:text-[#01b4e4] transition-colors">Series</Link>
+
               <a href="#" className="hover:text-[#01b4e4] transition-colors">
                 Gente
               </a>

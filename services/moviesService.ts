@@ -4,7 +4,7 @@ const API_URL = process.env.API_URL;
 
 export const movieService = {
   getPopularMovies: async (): Promise<MoviesResponse> => {
-    const res = await fetch(`${API_URL}/movie/popular?language=en-US&page=1`, {
+    const res = await fetch(`${API_URL}/movie/popular?language=es-ES&page=1`, {
       next: { revalidate: 3600 },
       headers: {
         'Authorization': `Bearer ${process.env.API_KEY}`
