@@ -13,5 +13,12 @@
     "auth",
     "geist"
   ],
-  "ignorePaths": ["node_modules", ".next", "public", "package-lock.json", ".vscode"]
+  "ignorePaths": [
+    "node_modules",
+    ".next",
+    "public",
+    "package-lock.json",
+    ".vscode",
+    "README.md"
+  ]
 }
