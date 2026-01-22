@@ -5,7 +5,8 @@ import { tvService } from '../../services/tvService';
 
 export default async function SeriesPage() {
   const series = await tvService.getPopularTvs();
-
+  console.log('tis is a message');
+  const someting = 'this is a message';
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
