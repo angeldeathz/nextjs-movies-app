@@ -3,6 +3,7 @@ module.exports = {
   rules: {
     // 1. El ID de Jira es OBLIGATORIO (dentro del paréntesis)
     'scope-empty': [2, 'never'],
+    //
 
     // 2. El tipo debe ser válido (feat, fix, etc.)
     'type-enum': [
