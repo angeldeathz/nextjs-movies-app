@@ -19,6 +19,7 @@
     "public",
     "package-lock.json",
     ".vscode",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md"
   ]
 }
