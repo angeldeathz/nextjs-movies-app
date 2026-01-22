@@ -29,6 +29,7 @@ This project includes several development tools to ensure code quality and consi
 [Husky](https://typicode.github.io/husky/) is used to manage Git hooks:
 
 - **Pre-commit hook** (`.husky/pre-commit`): Runs `lint-staged` to check and fix code before commits
+- **Commit-msg hook** (`.husky/commit-msg`): Validates commit messages using commitlint
 - **Pre-push hook** (`.husky/pre-push`): Runs TypeScript type checking and build verification before pushing
 
 ### Lint-staged
@@ -63,6 +64,23 @@ Includes `prettier-plugin-tailwindcss` for Tailwind CSS class sorting.
 - Includes dictionaries for TypeScript, Node.js, and npm
 - Custom word list for project-specific terms
 
+### Commitlint
+
+[Commitlint](https://commitlint.js.org/) is used to enforce conventional commit message format. Configuration file: `commitlint.config.cjs`
+
+- Uses `@commitlint/config-conventional` as base configuration
+- Requires commit messages to follow the format: `[PROYECTO-NUMERO] type(scope): subject`
+- Validates commit types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`
+- Integrated with Husky via `.husky/commit-msg` hook
+
+### better-npm-audit
+
+[better-npm-audit](https://github.com/jeemok/better-npm-audit) is used for enhanced npm security auditing. Configuration file: `.nsprc`
+
+- Provides better control over npm audit results
+- Allows ignoring specific vulnerabilities with expiration dates
+- More flexible than standard `npm audit` command
+
 ### Available Scripts
 
 - `npm run dev` - Start development server
@@ -70,7 +88,8 @@ Includes `prettier-plugin-tailwindcss` for Tailwind CSS class sorting.
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint with auto-fix
 - `npm run type-check` - Run TypeScript type checking
-- `npm run spell-check` - Run cspell on project files
+- `npm run cspell` - Run cspell on project files
+- `npm run audit` - Run better-npm-audit security audit
 
 ## Learn More
 
