@@ -9,7 +9,7 @@
     "lint": "eslint --fix",
     "prepare": "husky",
     "type-check": "tsc --noEmit",
-    "spell-check": "cspell \"{app,src,components,lib}/**/*.{ts,tsx,js,jsx,md}\"",
+    "cspell": "cspell \"{app,src,components,lib}/**/*.{ts,tsx,js,jsx,md}\"",
     "audit": "better-npm-audit audit"
   },
   "dependencies": {
