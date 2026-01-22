@@ -6,9 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
+    "lint": "eslint --fix",
     "prepare": "husky",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "spell-check": "cspell \"{app,src,components,lib}/**/*.{ts,tsx,js,jsx,md}\""
   },
   "dependencies": {
     "next": "16.1.4",
