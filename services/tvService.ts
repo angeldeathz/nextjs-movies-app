@@ -3,8 +3,8 @@ import { TvResponse } from '../interfaces/tv';
 const API_URL = process.env.API_URL;
 
 export const tvService = {
-  getPopularTvs: async (): Promise<TvResponse> => {
-    const res = await fetch(`${API_URL}/tv/popular?language=es-ES&page=1`, {
+  getPopularTvs: async (page = 1): Promise<TvResponse> => {
+    const res = await fetch(`${API_URL}/tv/popular?language=es-ES&page=${page}`, {
       next: { revalidate: 3600 },
       headers: {
         Authorization: `Bearer ${process.env.API_KEY}`,

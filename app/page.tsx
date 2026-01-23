@@ -3,13 +3,10 @@ import Header from '@/components/Header';
 import Paginator from '@/components/Paginator';
 import Sidebar from '@/components/Sidebar';
 
+import { SearchProps } from '../interfaces/searchProps';
 import { movieService } from '../services/moviesService';
 
-interface HomeProps {
-  searchParams: Promise<{ page?: string }>;
-}
-
-export default async function Home({ searchParams }: HomeProps) {
+export default async function Home({ searchParams }: SearchProps) {
   const params = await searchParams;
   const currentPage = Math.max(1, parseInt(params?.page ?? '1', 10) || 1);
   const movies = await movieService.getPopularMovies(currentPage);
