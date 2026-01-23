@@ -2,10 +2,17 @@
 
 import { render, screen } from '@testing-library/react';
 
-import Header from './Header';
+import Header from '../header/Header';
 
+// Mock next/link
 jest.mock('next/link', () => {
-  const MockLink = ({ children, href }: { children: React.ReactNode; href: string }) => {
+  const MockLink = ({
+    children,
+    href,
+  }: {
+    children: React.ReactNode;
+    href: string;
+  }) => {
     return <a href={href}>{children}</a>;
   };
   MockLink.displayName = 'MockLink';

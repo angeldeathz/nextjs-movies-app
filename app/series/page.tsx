@@ -8,7 +8,10 @@ import { tvService } from '../../services/tvService';
 export default async function SeriesPage({ searchParams }: SearchProps) {
   const params = await searchParams;
   const currentPage = Math.max(1, parseInt(params?.page ?? '1', 10) || 1);
-  const series = await tvService.getPopularTvs(currentPage);
+  const series = await tvService.getPopularTvs(
+    currentPage,
+    params?.sort_by ?? '',
+  );
 
   return (
     <div className="min-h-screen bg-white">

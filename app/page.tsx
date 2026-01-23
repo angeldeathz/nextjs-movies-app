@@ -9,7 +9,10 @@ import { movieService } from '../services/moviesService';
 export default async function Home({ searchParams }: SearchProps) {
   const params = await searchParams;
   const currentPage = Math.max(1, parseInt(params?.page ?? '1', 10) || 1);
-  const movies = await movieService.getPopularMovies(currentPage);
+  const movies = await movieService.getPopularMovies(
+    currentPage,
+    params?.sort_by ?? '',
+  );
 
   return (
     <div className="min-h-screen bg-white">
