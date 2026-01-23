@@ -5,7 +5,6 @@ export default function Header() {
     <header className="bg-[#032541] text-white">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo y navegación izquierda */}
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">
               <span className="text-xl font-bold">TMDB</span>
@@ -13,7 +12,7 @@ export default function Header() {
             </div>
             <nav className="hidden items-center gap-6 md:flex">
               <Link href="/" className="transition-colors hover:text-[#01b4e4]">
-                Peliculas
+                Películas
               </Link>
               <Link href="/series" className="transition-colors hover:text-[#01b4e4]">
                 Series
@@ -28,7 +27,6 @@ export default function Header() {
             </nav>
           </div>
 
-          {/* Iconos derecha */}
           <div className="flex items-center gap-4">
             <button className="flex h-8 w-8 items-center justify-center rounded-full transition-colors hover:bg-white/10">
               <span className="text-xl">+</span>

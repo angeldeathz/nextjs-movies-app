@@ -11,7 +11,8 @@
     "sonner",
     "lucide",
     "auth",
-    "geist"
+    "geist",
+    "Paginador"
   ],
   "ignorePaths": [
     "node_modules",

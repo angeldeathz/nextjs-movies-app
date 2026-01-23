@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { Tv } from '../interfaces/tv';
+import { Tv } from '../../interfaces/tv';
 
 interface TvCardProps {
   tv: Tv;

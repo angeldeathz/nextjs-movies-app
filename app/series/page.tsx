@@ -1,7 +1,7 @@
+import TvCard from '../../components/cards/TvCard';
 import Header from '../../components/Header';
 import Paginator from '../../components/Paginator';
 import Sidebar from '../../components/Sidebar';
-import TvCard from '../../components/TvCard';
 import { tvService } from '../../services/tvService';
 
 export default async function SeriesPage() {
