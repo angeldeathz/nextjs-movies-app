@@ -7,8 +7,9 @@ export const movieService = {
     page = 1,
     sort_by?: string,
   ): Promise<MoviesResponse> => {
+    const release_date = new Date().toISOString().split('T')[0];
     const res = await fetch(
-      `${API_URL}/discover/movie?language=es-ES&page=${page}&sort_by=${sort_by}&include_adult=false`,
+      `${API_URL}/discover/movie?language=es-ES&page=${page}&sort_by=${sort_by}&release_date.lte=${release_date}&vote_count.gte=10`,
       {
         next: { revalidate: 3600 },
         headers: {

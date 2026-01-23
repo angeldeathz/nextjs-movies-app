@@ -36,6 +36,7 @@ export default async function SeriesPage({ searchParams }: SearchProps) {
               currentPage={series.page}
               totalPages={Math.min(series.total_pages, 500)}
               basePath="/series"
+              sortBy={params?.sort_by ?? ''}
             />
           </div>
         </div>

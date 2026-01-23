@@ -1,10 +1,6 @@
 import Link from 'next/link';
 
-interface PaginatorProps {
-  currentPage: number;
-  totalPages: number;
-  basePath?: string;
-}
+import { PaginatorProps } from '../../interfaces/paginatorProps';
 
 function getPageNumbers(
   currentPage: number,
@@ -46,6 +42,7 @@ export default function Paginator({
   currentPage,
   totalPages,
   basePath = '/',
+  sortBy,
 }: PaginatorProps) {
   if (totalPages <= 1) return null;
 
@@ -60,9 +57,10 @@ export default function Paginator({
         : 'bg-white text-gray-700 border-gray-200 hover:border-[#01b4e4] hover:text-[#01b4e4] hover:bg-gray-50'
     }`;
 
-  const buildHref = (page: number) => {
+  const buildHref = (page: number, sortBy?: string) => {
     const params = new URLSearchParams();
     if (page > 1) params.set('page', String(page));
+    if (sortBy) params.set('sort_by', sortBy);
     const query = params.toString();
     return query ? `${basePath}?${query}` : basePath;
   };
@@ -74,11 +72,16 @@ export default function Paginator({
     >
       {prevPage ? (
         <Link
-          href={buildHref(prevPage)}
+          href={buildHref(prevPage, sortBy)}
           className={`${linkClass(false)} gap-1.5 px-4`}
           aria-label="Página anterior"
         >
-          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg
+            className="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -93,7 +96,12 @@ export default function Paginator({
           className="flex h-10 min-w-[2.5rem] cursor-not-allowed items-center justify-center gap-1.5 rounded-lg border border-gray-200 bg-gray-100 px-4 font-medium text-gray-400"
           aria-disabled="true"
         >
-          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg
+            className="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -117,7 +125,7 @@ export default function Paginator({
           ) : (
             <Link
               key={item}
-              href={buildHref(item)}
+              href={buildHref(item, sortBy)}
               className={linkClass(item === currentPage)}
               aria-label={`Página ${item}`}
               aria-current={item === currentPage ? 'page' : undefined}
@@ -130,12 +138,17 @@ export default function Paginator({
 
       {nextPage ? (
         <Link
-          href={buildHref(nextPage)}
+          href={buildHref(nextPage, sortBy)}
           className={`${linkClass(false)} gap-1.5 px-4`}
           aria-label="Página siguiente"
         >
           Siguiente
-          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg
+            className="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -150,7 +163,12 @@ export default function Paginator({
           aria-disabled="true"
         >
           Siguiente
-          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg
+            className="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"

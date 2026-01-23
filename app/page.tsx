@@ -37,6 +37,7 @@ export default async function Home({ searchParams }: SearchProps) {
               currentPage={movies.page}
               totalPages={Math.min(movies.total_pages, 500)}
               basePath="/"
+              sortBy={params?.sort_by ?? ''}
             />
           </div>
         </div>

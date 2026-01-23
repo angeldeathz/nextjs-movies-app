@@ -4,8 +4,9 @@ const API_URL = process.env.API_URL;
 
 export const tvService = {
   getPopularTvs: async (page = 1, sort_by?: string): Promise<TvResponse> => {
+    const first_air_date = new Date().toISOString().split('T')[0];
     const res = await fetch(
-      `${API_URL}/discover/tv?language=es-ES&page=${page}&sort_by=${sort_by}&include_null_first_air_dates=false&include_adult=false`,
+      `${API_URL}/discover/tv?language=es-ES&page=${page}&sort_by=${sort_by}&first_air_date.lte=${first_air_date}&vote_count.gte=10`,
       {
         next: { revalidate: 3600 },
         headers: {
