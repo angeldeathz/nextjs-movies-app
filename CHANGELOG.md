@@ -1,5 +1,12 @@
 # NextJS Movies App Changelog
 
+### [0.1.8](https://github.com/angeldeathz/nextjs-movies-app/compare/v0.1.7...v0.1.8) (2026-01-23)
+
+### 🚀 Features
+
+- **jira-123:** improving paginator and api calls ([dbde590](https://github.com/angeldeathz/nextjs-movies-app/commit/dbde590c67d088ed25a0df3798421e9c80bf9752))
+- **jira-12:** display information of a single movie/tv ([0a845c5](https://github.com/angeldeathz/nextjs-movies-app/commit/0a845c5ee6b099d39863b7f6eebf6d7579f1f54e))
+
 ### [0.1.7](https://github.com/angeldeathz/nextjs-movies-app/compare/v0.1.6...v0.1.7) (2026-01-23)
 
 ### 🐛 Bug Fixes
