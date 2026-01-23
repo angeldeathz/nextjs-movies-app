@@ -1,5 +1,17 @@
 # NextJS Movies App Changelog
 
+### [0.1.7](https://github.com/angeldeathz/nextjs-movies-app/compare/v0.1.6...v0.1.7) (2026-01-23)
+
+### 🐛 Bug Fixes
+
+- **JIRA-12:** fix lint ([e7d29f9](https://github.com/angeldeathz/nextjs-movies-app/commit/e7d29f9f02384ab690cb8b4bf76dd8f7ffff5096))
+- **JIRA-12:** fixed series page with correct pagination ([738e4e3](https://github.com/angeldeathz/nextjs-movies-app/commit/738e4e36ec906464a0c767fecf1f9d3054cefcad))
+
+### 🚀 Features
+
+- **JIRA-12:** added tests ([b0bac57](https://github.com/angeldeathz/nextjs-movies-app/commit/b0bac57bbb1443f8850db457f05aae98dbe8feb4))
+- **JIRA22:** added order by functionality ([dd957f7](https://github.com/angeldeathz/nextjs-movies-app/commit/dd957f7d25d39e9bb88b4908c9f6b80028a62dd4))
+
 ### [0.1.6](https://github.com/angeldeathz/nextjs-movies-app/compare/v0.1.5...v0.1.6) (2026-01-22)
 
 ### 📝 Documentation
