@@ -1,7 +1,7 @@
 import MovieCard from '@/components/cards/MovieCard';
-import Header from '@/components/Header';
-import Paginator from '@/components/Paginator';
-import Sidebar from '@/components/Sidebar';
+import Header from '@/components/header/Header';
+import Paginator from '@/components/paginator/Paginator';
+import Sidebar from '@/components/sidebar/Sidebar';
 
 import { SearchProps } from '../interfaces/searchProps';
 import { movieService } from '../services/moviesService';

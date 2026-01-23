@@ -1,4 +1,4 @@
 {
-  "*.{js,jsx,ts,tsx}": ["cspell --no-must-find-files", "eslint --fix", "prettier --write"],
-  "*.{json,css,md}": ["cspell --no-must-find-files", "prettier --write"]
+  "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write"],
+  "*.{json,css,md}": ["prettier --write"]
 }

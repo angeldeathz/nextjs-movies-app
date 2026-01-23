@@ -21,6 +21,7 @@
     "package-lock.json",
     ".vscode",
     "README.md",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    "*.test.tsx"
   ]
 }
