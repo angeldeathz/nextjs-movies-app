@@ -1,22 +1,19 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Tv } from '../../interfaces/tv';
+import RatingCircle from '../rating-circle/RatingCircle';
 
 interface TvCardProps {
   tv: Tv;
 }
 
 export default function TvCard({ tv }: TvCardProps) {
-  const getRatingColor = (rating: number) => {
-    if (rating >= 70) return 'bg-green-500';
-    if (rating >= 50) return 'bg-yellow-500';
-    return 'bg-red-500';
-  };
-
   const imageUrl = `${process.env.IMG_BASE_URL}${tv.poster_path}`;
+  const voteAverage = Math.round(tv.vote_average * 10);
 
   return (
-    <div className="group cursor-pointer">
+    <Link href={`/series/${tv.id}`} className="group cursor-pointer">
       {/* Contenedor del poster */}
       <div className="relative mb-2 overflow-hidden rounded-lg">
         {/* Poster de la serie */}
@@ -32,18 +29,16 @@ export default function TvCard({ tv }: TvCardProps) {
 
         {/* Rating circular en la esquina inferior izquierda */}
         <div className="absolute bottom-0 left-0 m-2">
-          <div
-            className={`${getRatingColor(
-              tv.vote_average,
-            )} flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold text-white shadow-lg`}
-          >
-            {tv.vote_average}%
-          </div>
+          <RatingCircle voteAverage={voteAverage} />
         </div>
 
         {/* Icono de menú en la esquina superior derecha */}
         <button className="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-black/50 opacity-0 transition-opacity group-hover:opacity-100 hover:bg-black/70">
-          <svg className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <svg
+            className="h-5 w-5 text-white"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
             <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
           </svg>
         </button>
@@ -56,6 +51,6 @@ export default function TvCard({ tv }: TvCardProps) {
         </h3>
         <p className="text-sm text-gray-600">{tv.first_air_date}</p>
       </div>
-    </div>
+    </Link>
   );
 }
